@@ -1,0 +1,33 @@
+{
+    "name": "theanh/laravel-module",
+    "description": "Laravel module",
+    "keywords": [
+        "laravel module",
+        "module for laravel"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+          "name": "The Anh Dang",
+          "email": "dangtheanh16@gmail.com",
+          "role": "Developer",
+          "homepage": "https://fb.com/TheAnhDang.1996"
+        }
+    ],
+    "require": {
+        "php": ">=7.2",
+        "ext-json": "*"
+    },
+    "require-dev": {
+      "laravel/laravel": "^6.0 | ^7.0 | ^8.0",
+      "phpunit/phpunit": "6.0 | 7.0 | 7.5 | 8.4 | ^8.5 | ^9.3"
+    },
+    "autoload": {
+        "psr-4": {
+          "Theanh\\Modules\\": "src/"
+        },
+        "files": [
+          "src/helpers.php"
+        ]
+    }
+}
