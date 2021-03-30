@@ -33,7 +33,7 @@
     "extra": {
       "laravel": {
         "providers": [
-          "Nwidart\\Modules\\LaravelModulesServiceProvider"
+          "Theanh\\Modules\\LaravelModulesServiceProvider"
         ]
       }
     }
