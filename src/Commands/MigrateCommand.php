@@ -15,7 +15,7 @@ class MigrateCommand extends Command
      *
      * @var string
      */
-    protected $name = 'module:migrate';
+    protected $name = 'plugin:migrate';
 
     /**
      * The console command description.
@@ -47,7 +47,7 @@ class MigrateCommand extends Command
         }
 
         foreach ($this->module->getOrdered($this->option('direction')) as $module) {
-            $this->line('Running for module: <info>' . $module->getName() . '</info>');
+            $this->line('Running for plugin: <info>' . $module->getName() . '</info>');
 
             $this->migrate($module);
         }
@@ -74,7 +74,7 @@ class MigrateCommand extends Command
         ]);
 
         if ($this->option('seed')) {
-            $this->call('module:seed', ['module' => $module->getName()]);
+            $this->call('plugin:seed', ['module' => $module->getName()]);
         }
     }
 

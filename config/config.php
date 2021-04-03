@@ -1,6 +1,6 @@
 <?php
 
-use Nwidart\Modules\Activators\FileActivator;
+use Theanh\Modules\Activators\FileActivator;
 
 return [
 
@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'namespace' => 'Modules',
+    'namespace' => 'Plugins',
 
     /*
     |--------------------------------------------------------------------------
@@ -25,15 +25,15 @@ return [
     */
 
     'stubs' => [
-        'enabled' => false,
+        'enabled' => true,
         'path' => __DIR__ . '/../stubs',
         'files' => [
             'routes/web' => 'Routes/web.php',
             'routes/api' => 'Routes/api.php',
             'views/index' => 'Resources/views/index.blade.php',
             'views/master' => 'Resources/views/layouts/master.blade.php',
-            'scaffold/config' => 'Config/config.php',
-            'composer' => 'composer.json',
+            //'scaffold/config' => 'Config/config.php',
+            //'composer' => 'composer.json',
             'assets/js/app' => 'Resources/assets/js/app.js',
             'assets/sass/app' => 'Resources/assets/sass/app.scss',
             'webpack' => 'webpack.mix.js',
@@ -46,8 +46,8 @@ return [
             'json' => ['LOWER_NAME', 'STUDLY_NAME', 'MODULE_NAMESPACE', 'PROVIDER_NAMESPACE'],
             'views/index' => ['LOWER_NAME'],
             'views/master' => ['LOWER_NAME', 'STUDLY_NAME'],
-            'scaffold/config' => ['STUDLY_NAME'],
-            'composer' => [
+            /*'scaffold/config' => ['STUDLY_NAME'],*/
+            /*'composer' => [
                 'LOWER_NAME',
                 'STUDLY_NAME',
                 'VENDOR',
@@ -55,7 +55,7 @@ return [
                 'AUTHOR_EMAIL',
                 'MODULE_NAMESPACE',
                 'PROVIDER_NAMESPACE',
-            ],
+            ],*/
         ],
         'gitkeep' => true,
     ],
@@ -70,7 +70,7 @@ return [
         |
         */
 
-        'modules' => base_path('Modules'),
+        'modules' => base_path('Plugins'),
         /*
         |--------------------------------------------------------------------------
         | Modules assets path
@@ -80,13 +80,13 @@ return [
         |
         */
 
-        'assets' => public_path('modules'),
+        'assets' => public_path('plugins'),
         /*
         |--------------------------------------------------------------------------
         | The migrations path
         |--------------------------------------------------------------------------
         |
-        | Where you run 'module:publish-migration' command, where do you publish the
+        | Where you run 'plugin:publish-migration' command, where do you publish the
         | the migration files?
         |
         */
@@ -100,12 +100,12 @@ return [
         | Set the generate key to false to not generate that folder
         */
         'generator' => [
-            'config' => ['path' => 'Config', 'generate' => true],
-            'command' => ['path' => 'Console', 'generate' => true],
+            'config' => ['path' => 'Config', 'generate' => false],
+            'command' => ['path' => 'Console', 'generate' => false],
             'migration' => ['path' => 'Database/Migrations', 'generate' => true],
             'seeder' => ['path' => 'Database/Seeders', 'generate' => true],
             'factory' => ['path' => 'Database/factories', 'generate' => true],
-            'model' => ['path' => 'Entities', 'generate' => true],
+            'model' => ['path' => 'Models', 'generate' => true],
             'routes' => ['path' => 'Routes', 'generate' => true],
             'controller' => ['path' => 'Http/Controllers', 'generate' => true],
             'filter' => ['path' => 'Http/Middleware', 'generate' => true],
@@ -153,10 +153,10 @@ return [
     */
 
     'composer' => [
-        'vendor' => 'nwidart',
+        'vendor' => 'tadcms',
         'author' => [
-            'name' => 'Nicolas Widart',
-            'email' => 'n.widart@gmail.com',
+            'name' => 'The Anh Dang',
+            'email' => 'dangtheanh16@gmail.com',
         ],
     ],
     /*
@@ -169,7 +169,7 @@ return [
     */
     'cache' => [
         'enabled' => false,
-        'key' => 'laravel-modules',
+        'key' => 'tadcms-plugins',
         'lifetime' => 60,
     ],
     /*
@@ -203,7 +203,7 @@ return [
     'activators' => [
         'file' => [
             'class' => FileActivator::class,
-            'statuses-file' => base_path('modules_statuses.json'),
+            'statuses-file' => base_path('storage/plugins_statuses.json'),
             'cache-key' => 'activator.installed',
             'cache-lifetime' => 604800,
         ],
