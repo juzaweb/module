@@ -26,7 +26,7 @@ class EventMakeCommand extends GeneratorCommand
      *
      * @var string
      */
-    protected $description = 'Create a new event class for the specified module';
+    protected $description = 'Create a new event class for the specified plugin';
 
     public function getTemplateContents()
     {
@@ -71,7 +71,7 @@ class EventMakeCommand extends GeneratorCommand
     {
         return [
             ['name', InputArgument::REQUIRED, 'The name of the event.'],
-            ['module', InputArgument::OPTIONAL, 'The name of module will be used.'],
+            ['module', InputArgument::OPTIONAL, 'The name of plugin will be used.'],
         ];
     }
 }

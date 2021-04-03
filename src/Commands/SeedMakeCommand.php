@@ -28,7 +28,7 @@ class SeedMakeCommand extends GeneratorCommand
      *
      * @var string
      */
-    protected $description = 'Generate new seeder for the specified module.';
+    protected $description = 'Generate new seeder for the specified plugin.';
 
     /**
      * Get the console command arguments.
@@ -39,7 +39,7 @@ class SeedMakeCommand extends GeneratorCommand
     {
         return [
             ['name', InputArgument::REQUIRED, 'The name of seeder will be created.'],
-            ['module', InputArgument::OPTIONAL, 'The name of module will be used.'],
+            ['module', InputArgument::OPTIONAL, 'The name of plugin will be used.'],
         ];
     }
 

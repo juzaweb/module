@@ -18,7 +18,7 @@ class SetupCommand extends Command
      *
      * @var string
      */
-    protected $description = 'Setting up modules folders for first use.';
+    protected $description = 'Setting up plugins folders for first use.';
 
     /**
      * Execute the console command.
@@ -31,7 +31,7 @@ class SetupCommand extends Command
     }
 
     /**
-     * Generate the modules folder.
+     * Generate the plugins folder.
      */
     public function generateModulesFolder()
     {

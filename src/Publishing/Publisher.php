@@ -5,7 +5,7 @@ namespace Theanh\Modules\Publishing;
 use Illuminate\Console\Command;
 use Theanh\Modules\Contracts\PublisherInterface;
 use Theanh\Modules\Contracts\RepositoryInterface;
-use Theanh\Modules\Module;
+use Theanh\Modules\Plugin;
 
 abstract class Publisher implements PublisherInterface
 {
@@ -53,9 +53,9 @@ abstract class Publisher implements PublisherInterface
     /**
      * The constructor.
      *
-     * @param Module $module
+     * @param Plugin $module
      */
-    public function __construct(Module $module)
+    public function __construct(Plugin $module)
     {
         $this->module = $module;
     }
@@ -87,7 +87,7 @@ abstract class Publisher implements PublisherInterface
     /**
      * Get module instance.
      *
-     * @return \Theanh\Modules\Module
+     * @return \Theanh\Modules\Plugin
      */
     public function getModule()
     {

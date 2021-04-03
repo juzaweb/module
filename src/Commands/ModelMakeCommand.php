@@ -32,7 +32,7 @@ class ModelMakeCommand extends GeneratorCommand
      *
      * @var string
      */
-    protected $description = 'Create a new model for the specified module.';
+    protected $description = 'Create a new model for the specified plugin.';
 
     public function handle()
     {
@@ -72,7 +72,7 @@ class ModelMakeCommand extends GeneratorCommand
     {
         return [
             ['model', InputArgument::REQUIRED, 'The name of model will be created.'],
-            ['module', InputArgument::OPTIONAL, 'The name of module will be used.'],
+            ['module', InputArgument::OPTIONAL, 'The name of plugin will be used.'],
         ];
     }
 

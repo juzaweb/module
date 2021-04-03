@@ -3,7 +3,7 @@
 namespace Theanh\Modules\Commands;
 
 use Illuminate\Console\Command;
-use Theanh\Modules\Module;
+use Theanh\Modules\Plugin;
 use Symfony\Component\Console\Input\InputArgument;
 
 class DisableCommand extends Command
@@ -20,7 +20,7 @@ class DisableCommand extends Command
      *
      * @var string
      */
-    protected $description = 'Disable the specified module.';
+    protected $description = 'Disable the specified plugin.';
 
     /**
      * Execute the console command.

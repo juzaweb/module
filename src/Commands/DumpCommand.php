@@ -19,14 +19,14 @@ class DumpCommand extends Command
      *
      * @var string
      */
-    protected $description = 'Dump-autoload the specified module or for all module.';
+    protected $description = 'Dump-autoload the specified plugin or for all plugin.';
 
     /**
      * Execute the console command.
      */
     public function handle()
     {
-        $this->info('Generating optimized autoload modules.');
+        $this->info('Generating optimized autoload plugins.');
 
         if ($module = $this->argument('module')) {
             $this->dump($module);
@@ -41,7 +41,7 @@ class DumpCommand extends Command
     {
         $module = $this->laravel['modules']->findOrFail($module);
 
-        $this->line("<comment>Running for module</comment>: {$module}");
+        $this->line("<comment>Running for plugin</comment>: {$module}");
 
         chdir($module->getPath());
 

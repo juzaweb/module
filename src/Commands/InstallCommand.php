@@ -22,7 +22,7 @@ class InstallCommand extends Command
      *
      * @var string
      */
-    protected $description = 'Install the specified module by given package name (vendor/name).';
+    protected $description = 'Install the specified plugin by given package name (vendor/name).';
 
     /**
      * Create a new command instance.
@@ -52,7 +52,7 @@ class InstallCommand extends Command
     }
 
     /**
-     * Install modules from modules.json file.
+     * Install plugins from plugins.json file.
      */
     protected function installFromFile()
     {
@@ -78,7 +78,7 @@ class InstallCommand extends Command
     }
 
     /**
-     * Install the specified module.
+     * Install the specified plugin.
      *
      * @param string $name
      * @param string $version
@@ -123,8 +123,8 @@ class InstallCommand extends Command
     protected function getArguments()
     {
         return [
-            ['name', InputArgument::OPTIONAL, 'The name of module will be installed.'],
-            ['version', InputArgument::OPTIONAL, 'The version of module will be installed.'],
+            ['name', InputArgument::OPTIONAL, 'The name of plugin will be installed.'],
+            ['version', InputArgument::OPTIONAL, 'The version of plugin will be installed.'],
         ];
     }
 
@@ -139,7 +139,7 @@ class InstallCommand extends Command
             ['timeout', null, InputOption::VALUE_OPTIONAL, 'The process timeout.', null],
             ['path', null, InputOption::VALUE_OPTIONAL, 'The installation path.', null],
             ['type', null, InputOption::VALUE_OPTIONAL, 'The type of installation.', null],
-            ['tree', null, InputOption::VALUE_NONE, 'Install the module as a git subtree', null],
+            ['tree', null, InputOption::VALUE_NONE, 'Install the plugin as a git subtree', null],
             ['no-update', null, InputOption::VALUE_NONE, 'Disables the automatic update of the dependencies.', null],
         ];
     }

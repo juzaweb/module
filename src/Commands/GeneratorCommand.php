@@ -75,7 +75,7 @@ abstract class GeneratorCommand extends Command
     /**
      * Get class namespace.
      *
-     * @param \Theanh\Modules\Module $module
+     * @param \Theanh\Modules\Plugin $module
      *
      * @return string
      */

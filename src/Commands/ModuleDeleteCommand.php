@@ -8,7 +8,7 @@ use Symfony\Component\Console\Input\InputArgument;
 class ModuleDeleteCommand extends Command
 {
     protected $name = 'plugin:delete';
-    protected $description = 'Delete a module from the application';
+    protected $description = 'Delete a plugin from the application';
 
     public function handle()
     {
@@ -20,7 +20,7 @@ class ModuleDeleteCommand extends Command
     protected function getArguments()
     {
         return [
-            ['module', InputArgument::REQUIRED, 'The name of module to delete.'],
+            ['module', InputArgument::REQUIRED, 'The name of plugin to delete.'],
         ];
     }
 }

@@ -3,7 +3,7 @@
 namespace Theanh\Modules\Commands;
 
 use Illuminate\Support\Str;
-use Theanh\Modules\Module;
+use Theanh\Modules\Plugin;
 use Theanh\Modules\Support\Config\GenerateConfigReader;
 use Theanh\Modules\Support\Stub;
 use Theanh\Modules\Traits\ModuleCommandTrait;
@@ -28,7 +28,7 @@ class ListenerMakeCommand extends GeneratorCommand
      *
      * @var string
      */
-    protected $description = 'Create a new event listener class for the specified module';
+    protected $description = 'Create a new event listener class for the specified plugin';
 
     /**
      * Get the console command arguments.
@@ -39,7 +39,7 @@ class ListenerMakeCommand extends GeneratorCommand
     {
         return [
             ['name', InputArgument::REQUIRED, 'The name of the command.'],
-            ['module', InputArgument::OPTIONAL, 'The name of module will be used.'],
+            ['module', InputArgument::OPTIONAL, 'The name of plugin will be used.'],
         ];
     }
 

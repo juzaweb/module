@@ -6,7 +6,7 @@ use Illuminate\Filesystem\Filesystem;
 use Illuminate\Foundation\AliasLoader;
 use Illuminate\Foundation\ProviderRepository;
 use Illuminate\Support\Str;
-use Theanh\Modules\Module as BaseModule;
+use Theanh\Modules\Plugin as BaseModule;
 
 class Module extends BaseModule
 {

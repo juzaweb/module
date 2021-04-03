@@ -3,7 +3,7 @@
 namespace Theanh\Modules\Commands;
 
 use Illuminate\Console\Command;
-use Theanh\Modules\Module;
+use Theanh\Modules\Plugin;
 use Symfony\Component\Console\Input\InputOption;
 
 class ListCommand extends Command
@@ -20,7 +20,7 @@ class ListCommand extends Command
      *
      * @var string
      */
-    protected $description = 'Show list of all modules.';
+    protected $description = 'Show list of all plugins.';
 
     /**
      * Execute the console command.
@@ -81,7 +81,7 @@ class ListCommand extends Command
     protected function getOptions()
     {
         return [
-            ['only', 'o', InputOption::VALUE_OPTIONAL, 'Types of modules will be displayed.', null],
+            ['only', 'o', InputOption::VALUE_OPTIONAL, 'Types of plugins will be displayed.', null],
             ['direction', 'd', InputOption::VALUE_OPTIONAL, 'The direction of ordering.', 'asc'],
         ];
     }

@@ -51,7 +51,7 @@ class ModuleGenerator extends Generator
     /**
      * The module instance.
      *
-     * @var \Theanh\Modules\Module
+     * @var \Theanh\Modules\Plugin
      */
     protected $module;
 
@@ -227,7 +227,7 @@ class ModuleGenerator extends Generator
     /**
      * Get the module instance.
      *
-     * @return \Theanh\Modules\Module
+     * @return \Theanh\Modules\Plugin
      */
     public function getModule()
     {

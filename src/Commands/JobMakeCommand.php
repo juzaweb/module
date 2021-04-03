@@ -25,7 +25,7 @@ class JobMakeCommand extends GeneratorCommand
      *
      * @var string
      */
-    protected $description = 'Create a new job class for the specified module';
+    protected $description = 'Create a new job class for the specified plugin';
 
     protected $argumentName = 'name';
 
@@ -45,7 +45,7 @@ class JobMakeCommand extends GeneratorCommand
     {
         return [
             ['name', InputArgument::REQUIRED, 'The name of the job.'],
-            ['module', InputArgument::OPTIONAL, 'The name of module will be used.'],
+            ['module', InputArgument::OPTIONAL, 'The name of plugin will be used.'],
         ];
     }
 

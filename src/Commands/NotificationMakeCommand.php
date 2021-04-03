@@ -26,7 +26,7 @@ final class NotificationMakeCommand extends GeneratorCommand
      *
      * @var string
      */
-    protected $description = 'Create a new notification class for the specified module.';
+    protected $description = 'Create a new notification class for the specified plugin.';
 
     public function getDefaultNamespace() : string
     {
@@ -81,7 +81,7 @@ final class NotificationMakeCommand extends GeneratorCommand
     {
         return [
             ['name', InputArgument::REQUIRED, 'The name of the notification class.'],
-            ['module', InputArgument::OPTIONAL, 'The name of module will be used.'],
+            ['module', InputArgument::OPTIONAL, 'The name of plugin will be used.'],
         ];
     }
 }

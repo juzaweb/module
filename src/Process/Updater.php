@@ -2,7 +2,7 @@
 
 namespace Theanh\Modules\Process;
 
-use Theanh\Modules\Module;
+use Theanh\Modules\Plugin;
 
 class Updater extends Runner
 {

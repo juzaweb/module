@@ -11,7 +11,7 @@ use Illuminate\Support\Traits\Macroable;
 use Illuminate\Translation\Translator;
 use Theanh\Modules\Contracts\ActivatorInterface;
 
-abstract class Module
+abstract class Plugin
 {
     use Macroable;
 

@@ -3,7 +3,7 @@
 namespace Theanh\Modules\Commands;
 
 use Illuminate\Console\Command;
-use Theanh\Modules\Module;
+use Theanh\Modules\Plugin;
 use Symfony\Component\Console\Input\InputArgument;
 
 class EnableCommand extends Command
@@ -20,7 +20,7 @@ class EnableCommand extends Command
      *
      * @var string
      */
-    protected $description = 'Enable the specified module.';
+    protected $description = 'Enable the specified plugin.';
 
     /**
      * Execute the console command.

@@ -4,7 +4,7 @@ namespace Theanh\Modules\Commands;
 
 use Illuminate\Console\Command;
 use Theanh\Modules\Migrations\Migrator;
-use Theanh\Modules\Module;
+use Theanh\Modules\Plugin;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
 
@@ -22,7 +22,7 @@ class MigrateStatusCommand extends Command
      *
      * @var string
      */
-    protected $description = 'Status for all module migrations';
+    protected $description = 'Status for all plugin migrations';
 
     /**
      * @var \Theanh\Modules\Contracts\RepositoryInterface
@@ -53,7 +53,7 @@ class MigrateStatusCommand extends Command
     }
 
     /**
-     * Run the migration from the specified module.
+     * Run the migration from the specified plugin.
      *
      * @param Module $module
      */
@@ -75,7 +75,7 @@ class MigrateStatusCommand extends Command
     protected function getArguments()
     {
         return [
-            ['module', InputArgument::OPTIONAL, 'The name of module will be used.'],
+            ['module', InputArgument::OPTIONAL, 'The name of plugin will be used.'],
         ];
     }
 

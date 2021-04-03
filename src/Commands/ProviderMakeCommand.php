@@ -3,7 +3,7 @@
 namespace Theanh\Modules\Commands;
 
 use Illuminate\Support\Str;
-use Theanh\Modules\Module;
+use Theanh\Modules\Plugin;
 use Theanh\Modules\Support\Config\GenerateConfigReader;
 use Theanh\Modules\Support\Stub;
 use Theanh\Modules\Traits\ModuleCommandTrait;
@@ -33,7 +33,7 @@ class ProviderMakeCommand extends GeneratorCommand
      *
      * @var string
      */
-    protected $description = 'Create a new service provider class for the specified module.';
+    protected $description = 'Create a new service provider class for the specified plugin.';
 
     public function getDefaultNamespace() : string
     {
@@ -51,7 +51,7 @@ class ProviderMakeCommand extends GeneratorCommand
     {
         return [
             ['name', InputArgument::REQUIRED, 'The service provider name.'],
-            ['module', InputArgument::OPTIONAL, 'The name of module will be used.'],
+            ['module', InputArgument::OPTIONAL, 'The name of plugin will be used.'],
         ];
     }
 
@@ -74,7 +74,7 @@ class ProviderMakeCommand extends GeneratorCommand
     {
         $stub = $this->option('master') ? 'scaffold/provider' : 'provider';
 
-        /** @var Module $module */
+        /** @var Plugin $module */
         $module = $this->laravel['modules']->findOrFail($this->getModuleName());
 
         return (new Stub('/' . $stub . '.stub', [

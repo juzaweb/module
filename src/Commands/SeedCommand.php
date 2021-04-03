@@ -7,7 +7,7 @@ use Illuminate\Console\Command;
 use Illuminate\Contracts\Debug\ExceptionHandler;
 use Illuminate\Support\Str;
 use Theanh\Modules\Contracts\RepositoryInterface;
-use Theanh\Modules\Module;
+use Theanh\Modules\Plugin;
 use Theanh\Modules\Support\Config\GenerateConfigReader;
 use Theanh\Modules\Traits\ModuleCommandTrait;
 use RuntimeException;
@@ -30,7 +30,7 @@ class SeedCommand extends Command
      *
      * @var string
      */
-    protected $description = 'Run database seeder from the specified module or from all modules.';
+    protected $description = 'Run database seeder from the specified plugin or from all plugins.';
 
     /**
      * Execute the console command.
@@ -44,7 +44,7 @@ class SeedCommand extends Command
             } else {
                 $modules = $this->getModuleRepository()->getOrdered();
                 array_walk($modules, [$this, 'moduleSeed']);
-                $this->info('All modules seeded.');
+                $this->info('All plugins seeded.');
             }
         } catch (\Error $e) {
             $e = new ErrorException($e->getMessage(), $e->getCode(), 1, $e->getFile(), $e->getLine(), $e);
@@ -68,7 +68,7 @@ class SeedCommand extends Command
     {
         $modules = $this->laravel['modules'];
         if (!$modules instanceof RepositoryInterface) {
-            throw new RuntimeException('Module repository not found!');
+            throw new RuntimeException('Plugin repository not found!');
         }
 
         return $modules;
@@ -79,24 +79,24 @@ class SeedCommand extends Command
      *
      * @throws RuntimeException
      *
-     * @return Module
+     * @return Plugin
      */
     public function getModuleByName($name)
     {
         $modules = $this->getModuleRepository();
         if ($modules->has($name) === false) {
-            throw new RuntimeException("Module [$name] does not exists.");
+            throw new RuntimeException("Plugin [$name] does not exists.");
         }
 
         return $modules->find($name);
     }
 
     /**
-     * @param Module $module
+     * @param Plugin $module
      *
      * @return void
      */
-    public function moduleSeed(Module $module)
+    public function moduleSeed(Plugin $module)
     {
         $seeders = [];
         $name = $module->getName();
@@ -124,12 +124,12 @@ class SeedCommand extends Command
 
         if (count($seeders) > 0) {
             array_walk($seeders, [$this, 'dbSeed']);
-            $this->info("Module [$name] seeded.");
+            $this->info("Plugin [$name] seeded.");
         }
     }
 
     /**
-     * Seed the specified module.
+     * Seed the specified plugin.
      *
      * @param string $className
      */
@@ -153,7 +153,7 @@ class SeedCommand extends Command
     }
 
     /**
-     * Get master database seeder name for the specified module.
+     * Get master database seeder name for the specified plugin.
      *
      * @param string $name
      *
@@ -171,7 +171,7 @@ class SeedCommand extends Command
     }
 
     /**
-     * Get master database seeder name for the specified module under a different namespace than Modules.
+     * Get master database seeder name for the specified plugin under a different namespace than Modules.
      *
      * @param string $name
      *
@@ -224,7 +224,7 @@ class SeedCommand extends Command
     protected function getArguments()
     {
         return [
-            ['module', InputArgument::OPTIONAL, 'The name of module will be used.'],
+            ['module', InputArgument::OPTIONAL, 'The name of plugin will be used.'],
         ];
     }
 

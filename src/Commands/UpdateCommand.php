@@ -22,7 +22,7 @@ class UpdateCommand extends Command
      *
      * @var string
      */
-    protected $description = 'Update dependencies for the specified module or for all modules.';
+    protected $description = 'Update dependencies for the specified plugin or for all plugins.';
 
     /**
      * Execute the console command.
@@ -37,7 +37,7 @@ class UpdateCommand extends Command
             return;
         }
 
-        /** @var \Theanh\Modules\Module $module */
+        /** @var \Theanh\Modules\Plugin $module */
         foreach ($this->laravel['modules']->getOrdered() as $module) {
             $this->updateModule($module->getName());
         }
@@ -60,7 +60,7 @@ class UpdateCommand extends Command
     protected function getArguments()
     {
         return [
-            ['module', InputArgument::OPTIONAL, 'The name of module will be updated.'],
+            ['module', InputArgument::OPTIONAL, 'The name of plugin will be updated.'],
         ];
     }
 }

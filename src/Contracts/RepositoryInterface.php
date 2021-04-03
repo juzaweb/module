@@ -3,7 +3,7 @@
 namespace Theanh\Modules\Contracts;
 
 use Theanh\Modules\Exceptions\ModuleNotFoundException;
-use Theanh\Modules\Module;
+use Theanh\Modules\Plugin;
 
 interface RepositoryInterface
 {
@@ -131,7 +131,7 @@ interface RepositoryInterface
     /**
      * Find a specific module by its alias.
      * @param string $alias
-     * @return Module|void
+     * @return Plugin|void
      */
     public function findByAlias(string $alias);
 

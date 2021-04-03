@@ -3,7 +3,7 @@
 namespace Theanh\Modules\Lumen;
 
 use Illuminate\Support\Str;
-use Theanh\Modules\Module as BaseModule;
+use Theanh\Modules\Plugin as BaseModule;
 
 class Module extends BaseModule
 {

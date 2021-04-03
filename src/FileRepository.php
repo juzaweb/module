@@ -129,7 +129,7 @@ abstract class FileRepository implements RepositoryInterface, Countable
      * @param Container $app
      * @param string $args
      * @param string $path
-     * @return \Theanh\Modules\Module
+     * @return \Theanh\Modules\Plugin
      */
     abstract protected function createModule(...$args);
 

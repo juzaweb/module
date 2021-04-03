@@ -6,12 +6,12 @@ namespace Theanh\Modules\Commands;
 
 use Illuminate\Console\Command;
 use Theanh\Modules\Contracts\RepositoryInterface;
-use Theanh\Modules\Module;
+use Theanh\Modules\Plugin;
 
 class LaravelModulesV6Migrator extends Command
 {
     protected $name = 'plugin:v6:migrate';
-    protected $description = 'Migrate laravel-modules v5 modules statuses to v6.';
+    protected $description = 'Migrate laravel-modules v5 plugins statuses to v6.';
 
     public function handle()
     {
@@ -31,7 +31,7 @@ class LaravelModulesV6Migrator extends Command
                 $moduleStatuses[] = [$module->getName(), 'Disabled'];
             }
         }
-        $this->info('All modules have been migrated.');
+        $this->info('All plugins have been migrated.');
         $this->table(['Module name', 'Status'], $moduleStatuses);
     }
 }

@@ -31,7 +31,7 @@ class PolicyMakeCommand extends GeneratorCommand
      *
      * @var string
      */
-    protected $description = 'Create a new policy class for the specified module.';
+    protected $description = 'Create a new policy class for the specified plugin.';
 
     public function getDefaultNamespace() : string
     {
@@ -49,7 +49,7 @@ class PolicyMakeCommand extends GeneratorCommand
     {
         return [
             ['name', InputArgument::REQUIRED, 'The name of the policy class.'],
-            ['module', InputArgument::OPTIONAL, 'The name of module will be used.'],
+            ['module', InputArgument::OPTIONAL, 'The name of plugin will be used.'],
         ];
     }
 

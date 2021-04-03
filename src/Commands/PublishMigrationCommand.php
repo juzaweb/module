@@ -21,7 +21,7 @@ class PublishMigrationCommand extends Command
      *
      * @var string
      */
-    protected $description = "Publish a module's migrations to the application";
+    protected $description = "Publish a plugin's migrations to the application";
 
     /**
      * Execute the console command.
@@ -42,9 +42,9 @@ class PublishMigrationCommand extends Command
     }
 
     /**
-     * Publish migration for the specified module.
+     * Publish migration for the specified plugin.
      *
-     * @param \Theanh\Modules\Module $module
+     * @param \Theanh\Modules\Plugin $module
      */
     public function publish($module)
     {
@@ -62,7 +62,7 @@ class PublishMigrationCommand extends Command
     protected function getArguments()
     {
         return [
-            ['module', InputArgument::OPTIONAL, 'The name of module being used.'],
+            ['module', InputArgument::OPTIONAL, 'The name of plugin being used.'],
         ];
     }
 }

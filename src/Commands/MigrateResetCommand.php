@@ -24,7 +24,7 @@ class MigrateResetCommand extends Command
      *
      * @var string
      */
-    protected $description = 'Reset the modules migrations.';
+    protected $description = 'Reset the plugins migrations.';
 
     /**
      * @var \Theanh\Modules\Contracts\RepositoryInterface
@@ -54,7 +54,7 @@ class MigrateResetCommand extends Command
     }
 
     /**
-     * Rollback migration from the specified module.
+     * Rollback migration from the specified plugin.
      *
      * @param $module
      */
@@ -93,7 +93,7 @@ class MigrateResetCommand extends Command
     protected function getArguments()
     {
         return [
-            ['module', InputArgument::OPTIONAL, 'The name of module will be used.'],
+            ['module', InputArgument::OPTIONAL, 'The name of plugin will be used.'],
         ];
     }
 

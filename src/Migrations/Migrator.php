@@ -5,7 +5,7 @@ namespace Theanh\Modules\Migrations;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
-use Theanh\Modules\Module;
+use Theanh\Modules\Plugin;
 use Theanh\Modules\Support\Config\GenerateConfigReader;
 
 class Migrator

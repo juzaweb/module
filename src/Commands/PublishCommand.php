@@ -3,7 +3,7 @@
 namespace Theanh\Modules\Commands;
 
 use Illuminate\Console\Command;
-use Theanh\Modules\Module;
+use Theanh\Modules\Plugin;
 use Theanh\Modules\Publishing\AssetPublisher;
 use Symfony\Component\Console\Input\InputArgument;
 
@@ -21,7 +21,7 @@ class PublishCommand extends Command
      *
      * @var string
      */
-    protected $description = 'Publish a module\'s assets to the application';
+    protected $description = 'Publish a plugin\'s assets to the application';
 
     /**
      * Execute the console command.
@@ -38,7 +38,7 @@ class PublishCommand extends Command
     }
 
     /**
-     * Publish assets from all modules.
+     * Publish assets from all plugins.
      */
     public function publishAll()
     {
@@ -48,7 +48,7 @@ class PublishCommand extends Command
     }
 
     /**
-     * Publish assets from the specified module.
+     * Publish assets from the specified plugin.
      *
      * @param string $name
      */
@@ -76,7 +76,7 @@ class PublishCommand extends Command
     protected function getArguments()
     {
         return [
-            ['module', InputArgument::OPTIONAL, 'The name of module will be used.'],
+            ['module', InputArgument::OPTIONAL, 'The name of plugin will be used.'],
         ];
     }
 }
