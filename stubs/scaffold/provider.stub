@@ -15,7 +15,6 @@ class $CLASS$ extends ServiceProvider
     public function boot()
     {
         $this->registerTranslations();
-        $this->registerConfig();
         $this->registerViews();
         $this->registerFactories();
         $this->loadMigrationsFrom(module_path('$MODULE$', '$MIGRATIONS_PATH$'));
@@ -29,21 +28,6 @@ class $CLASS$ extends ServiceProvider
     public function register()
     {
         $this->app->register(RouteServiceProvider::class);
-    }
-
-    /**
-     * Register config.
-     *
-     * @return void
-     */
-    protected function registerConfig()
-    {
-        $this->publishes([
-            module_path('$MODULE$', '$PATH_CONFIG$/config.php') => config_path('$LOWER_NAME$.php'),
-        ], 'config');
-        $this->mergeConfigFrom(
-            module_path('$MODULE$', '$PATH_CONFIG$/config.php'), '$LOWER_NAME$'
-        );
     }
 
     /**
