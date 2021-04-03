@@ -171,7 +171,7 @@ abstract class Plugin
      *
      * @return $this
      */
-    public function setPath($path): Module
+    public function setPath($path): Plugin
     {
         $this->path = $path;
 
@@ -220,7 +220,7 @@ abstract class Plugin
     public function json($file = null) : Json
     {
         if ($file === null) {
-            $file = 'plugin.json';
+            $file = 'config.json';
         }
 
         return Arr::get($this->moduleJson, $file, function () use ($file) {
