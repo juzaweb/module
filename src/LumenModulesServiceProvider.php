@@ -15,7 +15,7 @@ class LumenModulesServiceProvider extends ModulesServiceProvider
     }
 
     /**
-     * Register all modules.
+     * Register all plugins.
      */
     public function register()
     {

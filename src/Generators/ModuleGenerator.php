@@ -14,7 +14,7 @@ use Theanh\Modules\Support\Stub;
 class ModuleGenerator extends Generator
 {
     /**
-     * The module name will created.
+     * The plugin name will created.
      *
      * @var string
      */
@@ -49,7 +49,7 @@ class ModuleGenerator extends Generator
     protected $activator;
 
     /**
-     * The module instance.
+     * The plugin instance.
      *
      * @var \Theanh\Modules\Plugin
      */
@@ -63,14 +63,14 @@ class ModuleGenerator extends Generator
     protected $force = false;
 
     /**
-     * Generate a plain module.
+     * Generate a plain plugin.
      *
      * @var bool
      */
     protected $plain = false;
 
     /**
-     * Enables the module.
+     * Enables the plugin.
      *
      * @var bool
      */
@@ -129,7 +129,7 @@ class ModuleGenerator extends Generator
     }
 
     /**
-     * Get the name of module will created. By default in studly case.
+     * Get the name of plugin will created. By default in studly case.
      *
      * @return string
      */
@@ -163,7 +163,7 @@ class ModuleGenerator extends Generator
     }
 
     /**
-     * Set the modules activator
+     * Set the plugins activator
      *
      * @param ActivatorInterface $activator
      *
@@ -225,7 +225,7 @@ class ModuleGenerator extends Generator
     }
 
     /**
-     * Get the module instance.
+     * Get the plugin instance.
      *
      * @return \Theanh\Modules\Plugin
      */
@@ -235,7 +235,7 @@ class ModuleGenerator extends Generator
     }
 
     /**
-     * Set the module instance.
+     * Set the plugin instance.
      *
      * @param mixed $module
      *
@@ -283,7 +283,7 @@ class ModuleGenerator extends Generator
     }
 
     /**
-     * Generate the module.
+     * Generate the plugin.
      */
     public function generate()
     {
@@ -475,7 +475,7 @@ class ModuleGenerator extends Generator
 
     /**
      * Remove the default service provider that was added in the plugin.json file
-     * This is needed when a --plain module was created
+     * This is needed when a --plain plugin was created
      */
     private function cleanModuleJsonFile()
     {
@@ -493,7 +493,7 @@ class ModuleGenerator extends Generator
     }
 
     /**
-     * Get the module name in lower case.
+     * Get the plugin name in lower case.
      *
      * @return string
      */
@@ -503,7 +503,7 @@ class ModuleGenerator extends Generator
     }
 
     /**
-     * Get the module name in studly case.
+     * Get the plugin name in studly case.
      *
      * @return string
      */

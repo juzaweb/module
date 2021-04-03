@@ -5,7 +5,7 @@ namespace Theanh\Modules\Traits;
 trait MigrationLoaderTrait
 {
     /**
-     * Include all migrations files from the specified module.
+     * Include all migrations files from the specified plugin.
      *
      * @param string $module
      */

@@ -23,14 +23,14 @@ abstract class Plugin
     protected $app;
 
     /**
-     * The module name.
+     * The plugin name.
      *
      * @var
      */
     protected $name;
 
     /**
-     * The module path.
+     * The plugin path.
      *
      * @var string
      */
@@ -145,7 +145,7 @@ abstract class Plugin
     }
 
     /**
-     * Get module requirements.
+     * Get plugin requirements.
      *
      * @return array
      */
@@ -195,7 +195,7 @@ abstract class Plugin
     }
 
     /**
-     * Register module's translation.
+     * Register plugin's translation.
      *
      * @return void
      */
@@ -255,7 +255,7 @@ abstract class Plugin
     }
 
     /**
-     * Register the module.
+     * Register the plugin.
      */
     public function register(): void
     {
@@ -271,7 +271,7 @@ abstract class Plugin
     }
 
     /**
-     * Register the module event.
+     * Register the plugin event.
      *
      * @param string $event
      */
@@ -280,12 +280,12 @@ abstract class Plugin
         $this->app['events']->dispatch(sprintf('modules.%s.' . $event, $this->getLowerName()), [$this]);
     }
     /**
-     * Register the aliases from this module.
+     * Register the aliases from this plugin.
      */
     abstract public function registerAliases(): void;
 
     /**
-     * Register the service providers from this module.
+     * Register the service providers from this plugin.
      */
     abstract public function registerProviders(): void;
 
@@ -297,7 +297,7 @@ abstract class Plugin
     abstract public function getCachedServicesPath(): string;
 
     /**
-     * Register the files from this module.
+     * Register the files from this plugin.
      */
     protected function registerFiles(): void
     {
@@ -317,7 +317,7 @@ abstract class Plugin
     }
 
     /**
-     * Determine whether the given status same with the current module status.
+     * Determine whether the given status same with the current plugin status.
      *
      * @param bool $status
      *
@@ -329,7 +329,7 @@ abstract class Plugin
     }
 
     /**
-     * Determine whether the current module activated.
+     * Determine whether the current plugin activated.
      *
      * @return bool
      */
@@ -339,7 +339,7 @@ abstract class Plugin
     }
 
     /**
-     *  Determine whether the current module not disabled.
+     *  Determine whether the current plugin not disabled.
      *
      * @return bool
      */
@@ -349,7 +349,7 @@ abstract class Plugin
     }
 
     /**
-     * Set active state for current module.
+     * Set active state for current plugin.
      *
      * @param bool $active
      *
@@ -361,7 +361,7 @@ abstract class Plugin
     }
 
     /**
-     * Disable the current module.
+     * Disable the current plugin.
      */
     public function disable(): void
     {
@@ -374,7 +374,7 @@ abstract class Plugin
     }
 
     /**
-     * Enable the current module.
+     * Enable the current plugin.
      */
     public function enable(): void
     {
@@ -387,7 +387,7 @@ abstract class Plugin
     }
 
     /**
-     * Delete the current module.
+     * Delete the current plugin.
      *
      * @return bool
      */
@@ -411,7 +411,7 @@ abstract class Plugin
     }
 
     /**
-     * Check if can load files of module on boot method.
+     * Check if can load files of plugin on boot method.
      *
      * @return bool
      */

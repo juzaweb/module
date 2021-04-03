@@ -9,7 +9,7 @@ return [
     | Module Namespace
     |--------------------------------------------------------------------------
     |
-    | Default module namespace.
+    | Default plugin namespace.
     |
     */
 
@@ -20,7 +20,7 @@ return [
     | Module Stubs
     |--------------------------------------------------------------------------
     |
-    | Default module stubs.
+    | Default plugin stubs.
     |
     */
 
@@ -65,7 +65,7 @@ return [
         | Modules path
         |--------------------------------------------------------------------------
         |
-        | This path used for save the generated module. This path also will be added
+        | This path used for save the generated plugin. This path also will be added
         | automatically to list of scanned folders.
         |
         */
@@ -76,7 +76,7 @@ return [
         | Modules assets path
         |--------------------------------------------------------------------------
         |
-        | Here you may update the modules assets path.
+        | Here you may update the plugins assets path.
         |
         */
 

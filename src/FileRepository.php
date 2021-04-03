@@ -28,7 +28,7 @@ abstract class FileRepository implements RepositoryInterface, Countable
     protected $app;
 
     /**
-     * The module path.
+     * The plugin path.
      *
      * @var string|null
      */
@@ -78,7 +78,7 @@ abstract class FileRepository implements RepositoryInterface, Countable
     }
 
     /**
-     * Add other module location.
+     * Add other plugin location.
      *
      * @param string $path
      *
@@ -102,7 +102,7 @@ abstract class FileRepository implements RepositoryInterface, Countable
     }
 
     /**
-     * Get scanned modules paths.
+     * Get scanned plugins paths.
      *
      * @return array
      */
@@ -134,7 +134,7 @@ abstract class FileRepository implements RepositoryInterface, Countable
     abstract protected function createModule(...$args);
 
     /**
-     * Get & scan all modules.
+     * Get & scan all plugins.
      *
      * @return array
      */
@@ -160,7 +160,7 @@ abstract class FileRepository implements RepositoryInterface, Countable
     }
 
     /**
-     * Get all modules.
+     * Get all plugins.
      *
      * @return array
      */
@@ -174,7 +174,7 @@ abstract class FileRepository implements RepositoryInterface, Countable
     }
 
     /**
-     * Format the cached data as array of modules.
+     * Format the cached data as array of plugins.
      *
      * @param array $cached
      *
@@ -194,7 +194,7 @@ abstract class FileRepository implements RepositoryInterface, Countable
     }
 
     /**
-     * Get cached modules.
+     * Get cached plugins.
      *
      * @return array
      */
@@ -206,7 +206,7 @@ abstract class FileRepository implements RepositoryInterface, Countable
     }
 
     /**
-     * Get all modules as collection instance.
+     * Get all plugins as collection instance.
      *
      * @return Collection
      */
@@ -216,7 +216,7 @@ abstract class FileRepository implements RepositoryInterface, Countable
     }
 
     /**
-     * Get modules by status.
+     * Get plugins by status.
      *
      * @param $status
      *
@@ -237,7 +237,7 @@ abstract class FileRepository implements RepositoryInterface, Countable
     }
 
     /**
-     * Determine whether the given module exist.
+     * Determine whether the given plugin exist.
      *
      * @param $name
      *

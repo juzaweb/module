@@ -17,14 +17,14 @@ abstract class ModulesServiceProvider extends ServiceProvider
     }
 
     /**
-     * Register all modules.
+     * Register all plugins.
      */
     public function register()
     {
     }
 
     /**
-     * Register all modules.
+     * Register all plugins.
      */
     protected function registerModules()
     {

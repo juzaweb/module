@@ -5,7 +5,7 @@ namespace Theanh\Modules\Traits;
 trait ModuleCommandTrait
 {
     /**
-     * Get the module name.
+     * Get the plugin name.
      *
      * @return string
      */

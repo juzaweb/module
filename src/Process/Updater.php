@@ -7,7 +7,7 @@ use Theanh\Modules\Plugin;
 class Updater extends Runner
 {
     /**
-     * Update the dependencies for the specified module by given the module name.
+     * Update the dependencies for the specified plugin by given the plugin name.
      *
      * @param string $module
      */

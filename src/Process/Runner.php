@@ -8,7 +8,7 @@ use Theanh\Modules\Contracts\RunableInterface;
 class Runner implements RunableInterface
 {
     /**
-     * The module instance.
+     * The plugin instance.
      * @var RepositoryInterface
      */
     protected $module;

@@ -7,21 +7,21 @@ use Theanh\Modules\Plugin;
 interface ActivatorInterface
 {
     /**
-     * Enables a module
+     * Enables a plugin
      *
      * @param Plugin $module
      */
     public function enable(Plugin $module): void;
 
     /**
-     * Disables a module
+     * Disables a plugin
      *
      * @param Plugin $module
      */
     public function disable(Plugin $module): void;
 
     /**
-     * Determine whether the given status same with a module status.
+     * Determine whether the given status same with a plugin status.
      *
      * @param Plugin $module
      * @param bool $status
@@ -31,7 +31,7 @@ interface ActivatorInterface
     public function hasStatus(Plugin $module, bool $status): bool;
 
     /**
-     * Set active state for a module.
+     * Set active state for a plugin.
      *
      * @param Plugin $module
      * @param bool $active
@@ -39,7 +39,7 @@ interface ActivatorInterface
     public function setActive(Plugin $module, bool $active): void;
 
     /**
-     * Sets a module status by its name
+     * Sets a plugin status by its name
      *
      * @param  string $name
      * @param  bool $active
@@ -47,14 +47,14 @@ interface ActivatorInterface
     public function setActiveByName(string $name, bool $active): void;
 
     /**
-     * Deletes a module activation status
+     * Deletes a plugin activation status
      *
      * @param  Plugin $module
      */
     public function delete(Plugin $module): void;
 
     /**
-     * Deletes any module activation statuses created by this class.
+     * Deletes any plugin activation statuses created by this class.
      */
     public function reset(): void;
 }

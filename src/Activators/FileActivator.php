@@ -44,7 +44,7 @@ class FileActivator implements ActivatorInterface
     private $cacheLifetime;
 
     /**
-     * Array of modules activation statuses
+     * Array of plugins activation statuses
      *
      * @var array
      */
@@ -172,7 +172,7 @@ class FileActivator implements ActivatorInterface
     }
 
     /**
-     * Get modules statuses, either from the cache or from
+     * Get plugins statuses, either from the cache or from
      * the json statuses file if the cache is disabled.
      * @return array
      * @throws FileNotFoundException
@@ -201,7 +201,7 @@ class FileActivator implements ActivatorInterface
     }
 
     /**
-     * Flushes the modules activation statuses cache
+     * Flushes the plugins activation statuses cache
      */
     private function flushCache(): void
     {

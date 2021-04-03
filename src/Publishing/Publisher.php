@@ -10,14 +10,14 @@ use Theanh\Modules\Plugin;
 abstract class Publisher implements PublisherInterface
 {
     /**
-     * The name of module will used.
+     * The name of plugin will used.
      *
      * @var string
      */
     protected $module;
 
     /**
-     * The modules repository instance.
+     * The plugins repository instance.
      * @var RepositoryInterface
      */
     protected $repository;
@@ -85,7 +85,7 @@ abstract class Publisher implements PublisherInterface
     }
 
     /**
-     * Get module instance.
+     * Get plugin instance.
      *
      * @return \Theanh\Modules\Plugin
      */
@@ -95,7 +95,7 @@ abstract class Publisher implements PublisherInterface
     }
 
     /**
-     * Set modules repository instance.
+     * Set plugins repository instance.
      * @param RepositoryInterface $repository
      * @return $this
      */
@@ -107,7 +107,7 @@ abstract class Publisher implements PublisherInterface
     }
 
     /**
-     * Get modules repository instance.
+     * Get plugins repository instance.
      *
      * @return RepositoryInterface
      */
