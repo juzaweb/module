@@ -49,7 +49,7 @@ class UpdateCommand extends Command
 
         $this->laravel['modules']->update($name);
 
-        $this->info("Module [{$name}] updated successfully.");
+        $this->info("Plugin [{$name}] updated successfully.");
     }
 
     /**

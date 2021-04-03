@@ -27,15 +27,15 @@ class EnableCommand extends Command
      */
     public function handle()
     {
-        /** @var Module $module */
+        /** @var Plugin $module */
         $module = $this->laravel['modules']->findOrFail($this->argument('module'));
 
         if ($module->isDisabled()) {
             $module->enable();
 
-            $this->info("Module [{$module}] enabled successful.");
+            $this->info("Plugin [{$module}] enabled successful.");
         } else {
-            $this->comment("Module [{$module}] has already enabled.");
+            $this->comment("Plugin [{$module}] has already enabled.");
         }
     }
 
@@ -47,7 +47,7 @@ class EnableCommand extends Command
     protected function getArguments()
     {
         return [
-            ['module', InputArgument::REQUIRED, 'Module name.'],
+            ['module', InputArgument::REQUIRED, 'Plugin name.'],
         ];
     }
 }

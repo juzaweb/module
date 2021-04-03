@@ -56,9 +56,9 @@ class MigrateCommand extends Command
     /**
      * Run the migration from the specified plugin.
      *
-     * @param Module $module
+     * @param Plugin $module
      */
-    protected function migrate(Module $module)
+    protected function migrate(Plugin $module)
     {
         $path = str_replace(base_path(), '', (new Migrator($module, $this->getLaravel()))->getPath());
 

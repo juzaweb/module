@@ -293,7 +293,7 @@ class ModuleGenerator extends Generator
             if ($this->force) {
                 $this->module->delete($name);
             } else {
-                $this->console->error("Module [{$name}] already exist!");
+                $this->console->error("Plugin [{$name}] already exist!");
 
                 return;
             }
@@ -314,7 +314,7 @@ class ModuleGenerator extends Generator
 
         $this->activator->setActiveByName($name, $this->isActive);
 
-        $this->console->info("Module [{$name}] created successfully.");
+        $this->console->info("Plugin [{$name}] created successfully.");
     }
 
     /**

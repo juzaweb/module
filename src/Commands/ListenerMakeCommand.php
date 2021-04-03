@@ -75,7 +75,7 @@ class ListenerMakeCommand extends GeneratorCommand
         return $module->config('paths.generator.listener.namespace') ?: $module->config('paths.generator.listener.path', 'Listeners');
     }
 
-    protected function getEventName(Module $module)
+    protected function getEventName(Plugin $module)
     {
         $eventPath = GenerateConfigReader::read('event');
 

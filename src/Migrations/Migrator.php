@@ -11,8 +11,8 @@ use Theanh\Modules\Support\Config\GenerateConfigReader;
 class Migrator
 {
     /**
-     * Module instance.
-     * @var Module
+     * Plugin instance.
+     * @var Plugin
      */
     protected $module;
 
@@ -32,10 +32,10 @@ class Migrator
 
     /**
      * Create new instance.
-     * @param Module $module
+     * @param Plugin $module
      * @param Application $application
      */
-    public function __construct(Module $module, Application $application)
+    public function __construct(Plugin $module, Application $application)
     {
         $this->module = $module;
         $this->laravel = $application;

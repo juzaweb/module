@@ -20,7 +20,7 @@ class LaravelModulesV6Migrator extends Command
         $modules = $this->laravel['modules'];
 
         $modules = $modules->all();
-        /** @var Module $module */
+        /** @var Plugin $module */
         foreach ($modules as $module) {
             if ($module->json()->get('active') === 1) {
                 $module->enable();
@@ -32,6 +32,6 @@ class LaravelModulesV6Migrator extends Command
             }
         }
         $this->info('All plugins have been migrated.');
-        $this->table(['Module name', 'Status'], $moduleStatuses);
+        $this->table(['Plugin name', 'Status'], $moduleStatuses);
     }
 }

@@ -55,9 +55,9 @@ class MigrateStatusCommand extends Command
     /**
      * Run the migration from the specified plugin.
      *
-     * @param Module $module
+     * @param Plugin $module
      */
-    protected function migrateStatus(Module $module)
+    protected function migrateStatus(Plugin $module)
     {
         $path = str_replace(base_path(), '', (new Migrator($module, $this->getLaravel()))->getPath());
 
