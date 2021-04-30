@@ -1,9 +1,9 @@
 <?php
 
-namespace Theanh\Modules\Commands;
+namespace Tadcms\Modules\Commands;
 
 use Illuminate\Console\Command;
-use Theanh\Modules\Traits\ModuleCommandTrait;
+use Tadcms\Modules\Traits\ModuleCommandTrait;
 use Symfony\Component\Console\Input\InputArgument;
 
 class UpdateCommand extends Command
@@ -37,7 +37,7 @@ class UpdateCommand extends Command
             return;
         }
 
-        /** @var \Theanh\Modules\Plugin $module */
+        /** @var \Tadcms\Modules\Plugin $module */
         foreach ($this->laravel['modules']->getOrdered() as $module) {
             $this->updateModule($module->getName());
         }

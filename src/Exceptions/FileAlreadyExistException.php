@@ -1,6 +1,6 @@
 <?php
 
-namespace Theanh\Modules\Exceptions;
+namespace Tadcms\Modules\Exceptions;
 
 class FileAlreadyExistException extends \Exception
 {

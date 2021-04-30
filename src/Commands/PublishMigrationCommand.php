@@ -1,10 +1,10 @@
 <?php
 
-namespace Theanh\Modules\Commands;
+namespace Tadcms\Modules\Commands;
 
 use Illuminate\Console\Command;
-use Theanh\Modules\Migrations\Migrator;
-use Theanh\Modules\Publishing\MigrationPublisher;
+use Tadcms\Modules\Migrations\Migrator;
+use Tadcms\Modules\Publishing\MigrationPublisher;
 use Symfony\Component\Console\Input\InputArgument;
 
 class PublishMigrationCommand extends Command
@@ -44,7 +44,7 @@ class PublishMigrationCommand extends Command
     /**
      * Publish migration for the specified plugin.
      *
-     * @param \Theanh\Modules\Plugin $module
+     * @param \Tadcms\Modules\Plugin $module
      */
     public function publish($module)
     {

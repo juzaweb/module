@@ -1,6 +1,6 @@
 <?php
 
-use Theanh\Modules\Activators\FileActivator;
+use Tadcms\Modules\Activators\FileActivator;
 
 return [
 

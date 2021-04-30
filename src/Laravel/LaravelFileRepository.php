@@ -1,8 +1,8 @@
 <?php
 
-namespace Theanh\Modules\Laravel;
+namespace Tadcms\Modules\Laravel;
 
-use Theanh\Modules\FileRepository;
+use Tadcms\Modules\FileRepository;
 
 class LaravelFileRepository extends FileRepository
 {

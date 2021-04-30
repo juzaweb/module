@@ -1,6 +1,6 @@
 <?php
 
-namespace Theanh\Modules\Facades;
+namespace Tadcms\Modules\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

@@ -1,11 +1,11 @@
 <?php
 
-namespace Theanh\Modules\Publishing;
+namespace Tadcms\Modules\Publishing;
 
 use Illuminate\Console\Command;
-use Theanh\Modules\Contracts\PublisherInterface;
-use Theanh\Modules\Contracts\RepositoryInterface;
-use Theanh\Modules\Plugin;
+use Tadcms\Modules\Contracts\PublisherInterface;
+use Tadcms\Modules\Contracts\RepositoryInterface;
+use Tadcms\Modules\Plugin;
 
 abstract class Publisher implements PublisherInterface
 {
@@ -87,7 +87,7 @@ abstract class Publisher implements PublisherInterface
     /**
      * Get plugin instance.
      *
-     * @return \Theanh\Modules\Plugin
+     * @return \Tadcms\Modules\Plugin
      */
     public function getModule()
     {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Theanh\Modules;
+namespace Tadcms\Modules;
 
 use Countable;
 use Illuminate\Cache\CacheManager;
@@ -10,11 +10,11 @@ use Illuminate\Contracts\Routing\UrlGenerator;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Str;
 use Illuminate\Support\Traits\Macroable;
-use Theanh\Modules\Contracts\RepositoryInterface;
-use Theanh\Modules\Exceptions\InvalidAssetPath;
-use Theanh\Modules\Exceptions\ModuleNotFoundException;
-use Theanh\Modules\Process\Installer;
-use Theanh\Modules\Process\Updater;
+use Tadcms\Modules\Contracts\RepositoryInterface;
+use Tadcms\Modules\Exceptions\InvalidAssetPath;
+use Tadcms\Modules\Exceptions\ModuleNotFoundException;
+use Tadcms\Modules\Process\Installer;
+use Tadcms\Modules\Process\Updater;
 
 abstract class FileRepository implements RepositoryInterface, Countable
 {
@@ -129,7 +129,7 @@ abstract class FileRepository implements RepositoryInterface, Countable
      * @param Container $app
      * @param string $args
      * @param string $path
-     * @return \Theanh\Modules\Plugin
+     * @return \Tadcms\Modules\Plugin
      */
     abstract protected function createModule(...$args);
 
@@ -487,7 +487,7 @@ abstract class FileRepository implements RepositoryInterface, Countable
     /**
      * Get module used for cli session.
      * @return string
-     * @throws \Theanh\Modules\Exceptions\ModuleNotFoundException
+     * @throws \Tadcms\Modules\Exceptions\ModuleNotFoundException
      */
     public function getUsedNow() : string
     {
@@ -554,7 +554,7 @@ abstract class FileRepository implements RepositoryInterface, Countable
      * Enabling a specific module.
      * @param string $name
      * @return void
-     * @throws \Theanh\Modules\Exceptions\ModuleNotFoundException
+     * @throws \Tadcms\Modules\Exceptions\ModuleNotFoundException
      */
     public function enable($name)
     {
@@ -565,7 +565,7 @@ abstract class FileRepository implements RepositoryInterface, Countable
      * Disabling a specific module.
      * @param string $name
      * @return void
-     * @throws \Theanh\Modules\Exceptions\ModuleNotFoundException
+     * @throws \Tadcms\Modules\Exceptions\ModuleNotFoundException
      */
     public function disable($name)
     {

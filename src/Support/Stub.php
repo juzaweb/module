@@ -1,6 +1,6 @@
 <?php
 
-namespace Theanh\Modules\Support;
+namespace Tadcms\Modules\Support;
 
 class Stub
 {

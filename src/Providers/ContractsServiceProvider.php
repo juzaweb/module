@@ -1,10 +1,10 @@
 <?php
 
-namespace Theanh\Modules\Providers;
+namespace Tadcms\Modules\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Theanh\Modules\Contracts\RepositoryInterface;
-use Theanh\Modules\Laravel\LaravelFileRepository;
+use Tadcms\Modules\Contracts\RepositoryInterface;
+use Tadcms\Modules\Laravel\LaravelFileRepository;
 
 class ContractsServiceProvider extends ServiceProvider
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Theanh\Modules\Process;
+namespace Tadcms\Modules\Process;
 
-use Theanh\Modules\Plugin;
+use Tadcms\Modules\Plugin;
 
 class Updater extends Runner
 {

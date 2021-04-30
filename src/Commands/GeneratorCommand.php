@@ -1,10 +1,10 @@
 <?php
 
-namespace Theanh\Modules\Commands;
+namespace Tadcms\Modules\Commands;
 
 use Illuminate\Console\Command;
-use Theanh\Modules\Exceptions\FileAlreadyExistException;
-use Theanh\Modules\Generators\FileGenerator;
+use Tadcms\Modules\Exceptions\FileAlreadyExistException;
+use Tadcms\Modules\Generators\FileGenerator;
 
 abstract class GeneratorCommand extends Command
 {
@@ -75,7 +75,7 @@ abstract class GeneratorCommand extends Command
     /**
      * Get class namespace.
      *
-     * @param \Theanh\Modules\Plugin $module
+     * @param \Tadcms\Modules\Plugin $module
      *
      * @return string
      */

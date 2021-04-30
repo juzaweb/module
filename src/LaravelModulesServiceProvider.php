@@ -1,10 +1,10 @@
 <?php
 
-namespace Theanh\Modules;
+namespace Tadcms\Modules;
 
-use Theanh\Modules\Contracts\RepositoryInterface;
-use Theanh\Modules\Exceptions\InvalidActivatorClass;
-use Theanh\Modules\Support\Stub;
+use Tadcms\Modules\Contracts\RepositoryInterface;
+use Tadcms\Modules\Exceptions\InvalidActivatorClass;
+use Tadcms\Modules\Support\Stub;
 
 class LaravelModulesServiceProvider extends ModulesServiceProvider
 {

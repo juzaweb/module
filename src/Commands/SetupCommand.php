@@ -1,6 +1,6 @@
 <?php
 
-namespace Theanh\Modules\Commands;
+namespace Tadcms\Modules\Commands;
 
 use Illuminate\Console\Command;
 

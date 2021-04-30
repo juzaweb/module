@@ -1,15 +1,15 @@
 <?php
 
-namespace Theanh\Modules\Generators;
+namespace Tadcms\Modules\Generators;
 
 use Illuminate\Config\Repository as Config;
 use Illuminate\Console\Command as Console;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Str;
-use Theanh\Modules\Contracts\ActivatorInterface;
-use Theanh\Modules\FileRepository;
-use Theanh\Modules\Support\Config\GenerateConfigReader;
-use Theanh\Modules\Support\Stub;
+use Tadcms\Modules\Contracts\ActivatorInterface;
+use Tadcms\Modules\FileRepository;
+use Tadcms\Modules\Support\Config\GenerateConfigReader;
+use Tadcms\Modules\Support\Stub;
 
 class ModuleGenerator extends Generator
 {
@@ -51,7 +51,7 @@ class ModuleGenerator extends Generator
     /**
      * The plugin instance.
      *
-     * @var \Theanh\Modules\Plugin
+     * @var \Tadcms\Modules\Plugin
      */
     protected $module;
 
@@ -227,7 +227,7 @@ class ModuleGenerator extends Generator
     /**
      * Get the plugin instance.
      *
-     * @return \Theanh\Modules\Plugin
+     * @return \Tadcms\Modules\Plugin
      */
     public function getModule()
     {

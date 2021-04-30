@@ -1,10 +1,10 @@
 <?php
 
-namespace Theanh\Modules\Commands;
+namespace Tadcms\Modules\Commands;
 
 use Illuminate\Console\Command;
-use Theanh\Modules\Migrations\Migrator;
-use Theanh\Modules\Traits\MigrationLoaderTrait;
+use Tadcms\Modules\Migrations\Migrator;
+use Tadcms\Modules\Traits\MigrationLoaderTrait;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
 
@@ -27,7 +27,7 @@ class MigrateRollbackCommand extends Command
     protected $description = 'Rollback the plugins migrations.';
 
     /**
-     * @var \Theanh\Modules\Contracts\RepositoryInterface
+     * @var \Tadcms\Modules\Contracts\RepositoryInterface
      */
     protected $module;
 

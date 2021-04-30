@@ -1,8 +1,8 @@
 <?php
 
-namespace Theanh\Modules\Publishing;
+namespace Tadcms\Modules\Publishing;
 
-use Theanh\Modules\Migrations\Migrator;
+use Tadcms\Modules\Migrations\Migrator;
 
 class MigrationPublisher extends AssetPublisher
 {

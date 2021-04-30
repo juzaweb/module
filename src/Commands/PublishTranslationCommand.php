@@ -1,10 +1,10 @@
 <?php
 
-namespace Theanh\Modules\Commands;
+namespace Tadcms\Modules\Commands;
 
 use Illuminate\Console\Command;
-use Theanh\Modules\Plugin;
-use Theanh\Modules\Publishing\LangPublisher;
+use Tadcms\Modules\Plugin;
+use Tadcms\Modules\Publishing\LangPublisher;
 use Symfony\Component\Console\Input\InputArgument;
 
 class PublishTranslationCommand extends Command

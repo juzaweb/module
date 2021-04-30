@@ -1,10 +1,10 @@
 <?php
 
-namespace Theanh\Modules\Commands;
+namespace Tadcms\Modules\Commands;
 
 use Illuminate\Console\Command;
-use Theanh\Modules\Contracts\ActivatorInterface;
-use Theanh\Modules\Generators\ModuleGenerator;
+use Tadcms\Modules\Contracts\ActivatorInterface;
+use Tadcms\Modules\Generators\ModuleGenerator;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
 

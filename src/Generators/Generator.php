@@ -1,6 +1,6 @@
 <?php
 
-namespace Theanh\Modules\Generators;
+namespace Tadcms\Modules\Generators;
 
 abstract class Generator
 {

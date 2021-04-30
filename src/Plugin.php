@@ -1,6 +1,6 @@
 <?php
 
-namespace Theanh\Modules;
+namespace Tadcms\Modules;
 
 use Illuminate\Cache\CacheManager;
 use Illuminate\Container\Container;
@@ -9,7 +9,7 @@ use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
 use Illuminate\Support\Traits\Macroable;
 use Illuminate\Translation\Translator;
-use Theanh\Modules\Contracts\ActivatorInterface;
+use Tadcms\Modules\Contracts\ActivatorInterface;
 
 abstract class Plugin
 {

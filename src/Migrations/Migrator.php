@@ -1,12 +1,12 @@
 <?php
 
-namespace Theanh\Modules\Migrations;
+namespace Tadcms\Modules\Migrations;
 
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
-use Theanh\Modules\Plugin;
-use Theanh\Modules\Support\Config\GenerateConfigReader;
+use Tadcms\Modules\Plugin;
+use Tadcms\Modules\Support\Config\GenerateConfigReader;
 
 class Migrator
 {

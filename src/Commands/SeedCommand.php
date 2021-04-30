@@ -1,15 +1,15 @@
 <?php
 
-namespace Theanh\Modules\Commands;
+namespace Tadcms\Modules\Commands;
 
 use ErrorException;
 use Illuminate\Console\Command;
 use Illuminate\Contracts\Debug\ExceptionHandler;
 use Illuminate\Support\Str;
-use Theanh\Modules\Contracts\RepositoryInterface;
-use Theanh\Modules\Plugin;
-use Theanh\Modules\Support\Config\GenerateConfigReader;
-use Theanh\Modules\Traits\ModuleCommandTrait;
+use Tadcms\Modules\Contracts\RepositoryInterface;
+use Tadcms\Modules\Plugin;
+use Tadcms\Modules\Support\Config\GenerateConfigReader;
+use Tadcms\Modules\Traits\ModuleCommandTrait;
 use RuntimeException;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Theanh\Modules\Support\Config;
+namespace Tadcms\Modules\Support\Config;
 
 class GeneratorPath
 {

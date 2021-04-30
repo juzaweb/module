@@ -1,6 +1,6 @@
 <?php
 
-namespace Theanh\Modules;
+namespace Tadcms\Modules;
 
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Support\Collection as BaseCollection;

@@ -1,11 +1,11 @@
 <?php
 
-namespace Theanh\Modules\Commands;
+namespace Tadcms\Modules\Commands;
 
 use Illuminate\Support\Str;
-use Theanh\Modules\Support\Config\GenerateConfigReader;
-use Theanh\Modules\Support\Stub;
-use Theanh\Modules\Traits\ModuleCommandTrait;
+use Tadcms\Modules\Support\Config\GenerateConfigReader;
+use Tadcms\Modules\Support\Stub;
+use Tadcms\Modules\Traits\ModuleCommandTrait;
 use Symfony\Component\Console\Input\InputArgument;
 
 class RequestMakeCommand extends GeneratorCommand

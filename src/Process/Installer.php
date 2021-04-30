@@ -1,10 +1,10 @@
 <?php
 
-namespace Theanh\Modules\Process;
+namespace Tadcms\Modules\Process;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Str;
-use Theanh\Modules\Contracts\RepositoryInterface;
+use Tadcms\Modules\Contracts\RepositoryInterface;
 use Symfony\Component\Process\Process;
 
 class Installer
@@ -25,7 +25,7 @@ class Installer
 
     /**
      * The plugin repository instance.
-     * @var \Theanh\Modules\Contracts\RepositoryInterface
+     * @var \Tadcms\Modules\Contracts\RepositoryInterface
      */
     protected $repository;
 
@@ -90,7 +90,7 @@ class Installer
 
     /**
      * Set the plugin repository instance.
-     * @param \Theanh\Modules\Contracts\RepositoryInterface $repository
+     * @param \Tadcms\Modules\Contracts\RepositoryInterface $repository
      * @return $this
      */
     public function setRepository(RepositoryInterface $repository)

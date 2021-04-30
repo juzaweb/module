@@ -1,8 +1,8 @@
 <?php
 
-namespace Theanh\Modules;
+namespace Tadcms\Modules;
 
-use Theanh\Modules\Support\Stub;
+use Tadcms\Modules\Support\Stub;
 
 class LumenModulesServiceProvider extends ModulesServiceProvider
 {

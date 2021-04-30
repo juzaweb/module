@@ -1,6 +1,6 @@
 <?php
 
-namespace Theanh\Modules\Support\Migrations;
+namespace Tadcms\Modules\Support\Migrations;
 
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Support\Arr;

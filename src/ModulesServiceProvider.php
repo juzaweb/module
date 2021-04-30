@@ -1,11 +1,11 @@
 <?php
 
-namespace Theanh\Modules;
+namespace Tadcms\Modules;
 
 use Illuminate\Support\ServiceProvider;
-use Theanh\Modules\Providers\BootstrapServiceProvider;
-use Theanh\Modules\Providers\ConsoleServiceProvider;
-use Theanh\Modules\Providers\ContractsServiceProvider;
+use Tadcms\Modules\Providers\BootstrapServiceProvider;
+use Tadcms\Modules\Providers\ConsoleServiceProvider;
+use Tadcms\Modules\Providers\ContractsServiceProvider;
 
 abstract class ModulesServiceProvider extends ServiceProvider
 {

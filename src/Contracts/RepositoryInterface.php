@@ -1,9 +1,9 @@
 <?php
 
-namespace Theanh\Modules\Contracts;
+namespace Tadcms\Modules\Contracts;
 
-use Theanh\Modules\Exceptions\ModuleNotFoundException;
-use Theanh\Modules\Plugin;
+use Tadcms\Modules\Exceptions\ModuleNotFoundException;
+use Tadcms\Modules\Plugin;
 
 interface RepositoryInterface
 {
@@ -31,7 +31,7 @@ interface RepositoryInterface
     /**
      * Get plugins as plugins collection instance.
      *
-     * @return \Theanh\Modules\Collection
+     * @return \Tadcms\Modules\Collection
      */
     public function toCollection();
 
@@ -157,7 +157,7 @@ interface RepositoryInterface
      * Delete a specific plugin.
      * @param string $module
      * @return bool
-     * @throws \Theanh\Modules\Exceptions\ModuleNotFoundException
+     * @throws \Tadcms\Modules\Exceptions\ModuleNotFoundException
      */
     public function delete(string $module): bool;
 

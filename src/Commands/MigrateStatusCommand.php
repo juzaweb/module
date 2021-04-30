@@ -1,10 +1,10 @@
 <?php
 
-namespace Theanh\Modules\Commands;
+namespace Tadcms\Modules\Commands;
 
 use Illuminate\Console\Command;
-use Theanh\Modules\Migrations\Migrator;
-use Theanh\Modules\Plugin;
+use Tadcms\Modules\Migrations\Migrator;
+use Tadcms\Modules\Plugin;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
 
@@ -25,7 +25,7 @@ class MigrateStatusCommand extends Command
     protected $description = 'Status for all plugin migrations';
 
     /**
-     * @var \Theanh\Modules\Contracts\RepositoryInterface
+     * @var \Tadcms\Modules\Contracts\RepositoryInterface
      */
     protected $module;
 

@@ -1,9 +1,9 @@
 <?php
 
-namespace Theanh\Modules\Generators;
+namespace Tadcms\Modules\Generators;
 
 use Illuminate\Filesystem\Filesystem;
-use Theanh\Modules\Exceptions\FileAlreadyExistException;
+use Tadcms\Modules\Exceptions\FileAlreadyExistException;
 
 class FileGenerator extends Generator
 {

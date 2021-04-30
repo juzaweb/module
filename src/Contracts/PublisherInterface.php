@@ -1,6 +1,6 @@
 <?php
 
-namespace Theanh\Modules\Contracts;
+namespace Tadcms\Modules\Contracts;
 
 interface PublisherInterface
 {

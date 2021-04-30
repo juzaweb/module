@@ -1,9 +1,9 @@
 <?php
 
-namespace Theanh\Modules\Process;
+namespace Tadcms\Modules\Process;
 
-use Theanh\Modules\Contracts\RepositoryInterface;
-use Theanh\Modules\Contracts\RunableInterface;
+use Tadcms\Modules\Contracts\RepositoryInterface;
+use Tadcms\Modules\Contracts\RunableInterface;
 
 class Runner implements RunableInterface
 {

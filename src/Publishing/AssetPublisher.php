@@ -1,8 +1,8 @@
 <?php
 
-namespace Theanh\Modules\Publishing;
+namespace Tadcms\Modules\Publishing;
 
-use Theanh\Modules\Support\Config\GenerateConfigReader;
+use Tadcms\Modules\Support\Config\GenerateConfigReader;
 
 class AssetPublisher extends Publisher
 {

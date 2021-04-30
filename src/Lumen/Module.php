@@ -1,9 +1,9 @@
 <?php
 
-namespace Theanh\Modules\Lumen;
+namespace Tadcms\Modules\Lumen;
 
 use Illuminate\Support\Str;
-use Theanh\Modules\Plugin as BaseModule;
+use Tadcms\Modules\Plugin as BaseModule;
 
 class Module extends BaseModule
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Theanh\Modules\Traits;
+namespace Tadcms\Modules\Traits;
 
 trait MigrationLoaderTrait
 {

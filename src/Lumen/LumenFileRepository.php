@@ -1,8 +1,8 @@
 <?php
 
-namespace Theanh\Modules\Lumen;
+namespace Tadcms\Modules\Lumen;
 
-use Theanh\Modules\FileRepository;
+use Tadcms\Modules\FileRepository;
 
 class LumenFileRepository extends FileRepository
 {

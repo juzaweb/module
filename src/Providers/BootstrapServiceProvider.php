@@ -1,9 +1,9 @@
 <?php
 
-namespace Theanh\Modules\Providers;
+namespace Tadcms\Modules\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Theanh\Modules\Contracts\RepositoryInterface;
+use Tadcms\Modules\Contracts\RepositoryInterface;
 
 class BootstrapServiceProvider extends ServiceProvider
 {

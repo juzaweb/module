@@ -1,14 +1,14 @@
 <?php
 
-namespace Theanh\Modules\Activators;
+namespace Tadcms\Modules\Activators;
 
 use Illuminate\Cache\CacheManager;
 use Illuminate\Config\Repository as Config;
 use Illuminate\Container\Container;
 use Illuminate\Contracts\Filesystem\FileNotFoundException;
 use Illuminate\Filesystem\Filesystem;
-use Theanh\Modules\Contracts\ActivatorInterface;
-use Theanh\Modules\Plugin;
+use Tadcms\Modules\Contracts\ActivatorInterface;
+use Tadcms\Modules\Plugin;
 
 class FileActivator implements ActivatorInterface
 {

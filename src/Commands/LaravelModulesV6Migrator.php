@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Theanh\Modules\Commands;
+namespace Tadcms\Modules\Commands;
 
 use Illuminate\Console\Command;
-use Theanh\Modules\Contracts\RepositoryInterface;
-use Theanh\Modules\Plugin;
+use Tadcms\Modules\Contracts\RepositoryInterface;
+use Tadcms\Modules\Plugin;
 
 class LaravelModulesV6Migrator extends Command
 {

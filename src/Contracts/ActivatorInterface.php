@@ -1,8 +1,8 @@
 <?php
 
-namespace Theanh\Modules\Contracts;
+namespace Tadcms\Modules\Contracts;
 
-use Theanh\Modules\Plugin;
+use Tadcms\Modules\Plugin;
 
 interface ActivatorInterface
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace Theanh\Modules;
+namespace Tadcms\Modules;
 
 use Illuminate\Filesystem\Filesystem;
-use Theanh\Modules\Exceptions\InvalidJsonException;
+use Tadcms\Modules\Exceptions\InvalidJsonException;
 
 class Json
 {

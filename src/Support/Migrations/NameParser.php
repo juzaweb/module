@@ -1,6 +1,6 @@
 <?php
 
-namespace Theanh\Modules\Support\Migrations;
+namespace Tadcms\Modules\Support\Migrations;
 
 class NameParser
 {

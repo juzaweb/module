@@ -1,5 +1,6 @@
 {
-    "name": "theanh/laravel-module",
+    "name": "tadcms/module",
+    "version": "1.0.1",
     "description": "Laravel module",
     "keywords": [
         "laravel module",
@@ -24,7 +25,7 @@
     },
     "autoload": {
         "psr-4": {
-          "Theanh\\Modules\\": "src/"
+          "Tadcms\\Modules\\": "src/"
         },
         "files": [
           "src/helpers.php"
@@ -33,7 +34,7 @@
     "extra": {
       "laravel": {
         "providers": [
-          "Theanh\\Modules\\LaravelModulesServiceProvider"
+          "Tadcms\\Modules\\LaravelModulesServiceProvider"
         ]
       }
     }
