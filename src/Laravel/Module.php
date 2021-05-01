@@ -1,4 +1,14 @@
 <?php
+/**
+ * @package    tadcms/tadcms
+ * @author     The Anh Dang <dangtheanh16@gmail.com>
+ * @link       https://github.com/tadcms/tadcms
+ * @license    MIT
+ *
+ * Created by The Anh.
+ * Date: 5/1/2021
+ * Time: 4:31 PM
+ */
 
 namespace Tadcms\Modules\Laravel;
 
@@ -24,7 +34,7 @@ class Module extends BaseModule
     public function registerProviders(): void
     {
         (new ProviderRepository($this->app, new Filesystem(), $this->getCachedServicesPath()))
-            ->load($this->get('providers', []));
+            ->load($this->getExtraLarevel('providers'));
     }
 
     /**
@@ -33,7 +43,7 @@ class Module extends BaseModule
     public function registerAliases(): void
     {
         $loader = AliasLoader::getInstance();
-        foreach ($this->get('aliases', []) as $aliasName => $aliasClass) {
+        foreach ($this->getExtraLarevel('aliases') as $aliasName => $aliasClass) {
             $loader->alias($aliasName, $aliasClass);
         }
     }

@@ -111,7 +111,7 @@ abstract class Plugin
      */
     public function getSnakeName(): string
     {
-        return Str::snake($this->name);
+        return Str::snake(preg_replace('/[^0-9a-z]/', '_', $this->name));
     }
 
     /**
@@ -151,7 +151,7 @@ abstract class Plugin
      */
     public function getRequires(): array
     {
-        return $this->get('requires');
+        return $this->get('require', []);
     }
 
     /**
@@ -220,7 +220,7 @@ abstract class Plugin
     public function json($file = null) : Json
     {
         if ($file === null) {
-            $file = 'config.json';
+            $file = 'composer.json';
         }
 
         return Arr::get($this->moduleJson, $file, function () use ($file) {
@@ -301,7 +301,8 @@ abstract class Plugin
      */
     protected function registerFiles(): void
     {
-        foreach ($this->get('files', []) as $file) {
+        $files = Arr::get($this->get('autoload', []), 'files', []);
+        foreach ($files as $file) {
             include $this->path . '/' . $file;
         }
     }
@@ -439,5 +440,15 @@ abstract class Plugin
     private function loadTranslationsFrom(string $path, string $namespace): void
     {
         $this->translator->addNamespace($namespace, $path);
+    }
+
+    public function getExtraLarevel($key): array
+    {
+        $extra = $this->get('extra', []);
+        if ($laravel = Arr::get($extra, 'laravel', [])) {
+            return Arr::get($laravel, $key, []);
+        }
+
+        return [];
     }
 }
