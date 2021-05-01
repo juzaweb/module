@@ -9,22 +9,17 @@
  * Date: 5/1/2021
  * Time: 4:31 PM
  */
-
-$pluginsStatuses = __DIR__ . '/../../../storage/plugins_statuses.json';
 $pluginFolders = __DIR__ . '/../../../plugins';
-
-if (file_exists($pluginsStatuses)) {
-    $plugins = @json_decode(file_get_contents($pluginsStatuses));
+$pluginFile = __DIR__ . '/../../../bootstrap/cache/plugins_statuses.php';
+if (file_exists($pluginFile)) {
+    $plugins = require ($pluginFile);
     if ($plugins) {
         $loader = new \Composer\Autoload\ClassLoader();
-        foreach ($plugins as $plugin => $status) {
-            if ($status) {
-                $pluginFolder = $pluginFolders . '/' . strtolower($plugin) . '/src';
-
-                if (is_dir($pluginFolder)) {
-                    $namespace = ucwords(str_replace('/', ' ', $plugin));
-                    $namespace = str_replace(' ', '\\', $namespace) .'\\';
-                    $loader->setPsr4($namespace, [$pluginFolder]);
+        foreach ($plugins as $pluginInfo) {
+            foreach ($pluginInfo as $key => $item) {
+                $path = $pluginFolders . '/' . $item['path'];
+                if (is_dir($path)) {
+                    $loader->setPsr4($item['namespace'], [$path]);
                 }
             }
         }

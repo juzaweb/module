@@ -8,6 +8,7 @@ use Illuminate\Container\Container;
 use Illuminate\Contracts\Filesystem\FileNotFoundException;
 use Illuminate\Filesystem\Filesystem;
 use Tadcms\Modules\Contracts\ActivatorInterface;
+use Tadcms\Modules\Exceptions\ModuleNotFoundException;
 use Tadcms\Modules\Plugin;
 
 class FileActivator implements ActivatorInterface
@@ -115,7 +116,7 @@ class FileActivator implements ActivatorInterface
             return $status === false;
         }
 
-        return $this->modulesStatuses[$module->getName()] === $status;
+        return $status === true;
     }
 
     /**
@@ -131,7 +132,34 @@ class FileActivator implements ActivatorInterface
      */
     public function setActiveByName(string $name, bool $status): void
     {
-        $this->modulesStatuses[$name] = $status;
+        if ($status) {
+            $pluginFile = base_path('plugins') . '/' . $name . '/composer.json';
+            $setting = @json_decode($this->files->get($pluginFile), true);
+
+            if (isset($setting['autoload']['psr-4'])) {
+                $psr4 = $setting['autoload']['psr-4'];
+                $classMap = [];
+
+                foreach ($psr4 as $key => $path) {
+                    if ($path[strlen($path) - 1] == '/') {
+                        $path = rtrim($path, '/');
+                    }
+
+                    $classMap[] = [
+                        'namespace' => $key,
+                        'path' => $name . '/' . $path
+                    ];
+                }
+
+                $this->modulesStatuses[$name] = $classMap;
+            } else {
+                throw new ModuleNotFoundException("Plugin ". $name . " does not exists.");
+            }
+
+        } else {
+            unset($this->modulesStatuses[$name]);
+        }
+
         $this->writeJson();
         $this->flushCache();
     }
@@ -154,7 +182,12 @@ class FileActivator implements ActivatorInterface
      */
     private function writeJson(): void
     {
-        $this->files->put($this->statusesFile, json_encode($this->modulesStatuses, JSON_PRETTY_PRINT));
+        $str = '<?php
+
+return ' . var_export($this->modulesStatuses, true) .';
+
+';
+        $this->files->put($this->statusesFile, $str);
     }
 
     /**
@@ -168,7 +201,7 @@ class FileActivator implements ActivatorInterface
             return [];
         }
 
-        return json_decode($this->files->get($this->statusesFile), true);
+        return (require $this->statusesFile);
     }
 
     /**

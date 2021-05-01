@@ -451,4 +451,19 @@ abstract class Plugin
 
         return [];
     }
+
+    public function getExtraTadcms($key, $default = null)
+    {
+        $extra = $this->get('extra', []);
+        if ($laravel = Arr::get($extra, 'tadcms', [])) {
+            return Arr::get($laravel, $key, $default);
+        }
+
+        return $default;
+    }
+
+    public function getDisplayName(){
+        return $this->getExtraTadcms('name') ??
+            ucwords(str_replace('/', ' ', $this->getName()));
+    }
 }
