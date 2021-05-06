@@ -135,7 +135,7 @@ class ModuleGenerator extends Generator
      */
     public function getName()
     {
-        return Str::studly($this->name);
+        return Str::lower($this->name);
     }
 
     /**
@@ -301,18 +301,18 @@ class ModuleGenerator extends Generator
 
         $this->generateFolders();
 
-        $this->generateModuleJsonFile();
+        //$this->generateModuleJsonFile();
 
         if ($this->plain !== true) {
             $this->generateFiles();
             $this->generateResources();
         }
 
-        if ($this->plain === true) {
+        /*if ($this->plain === true) {
             $this->cleanModuleJsonFile();
-        }
+        }*/
 
-        $this->activator->setActiveByName($name, $this->isActive);
+        //$this->activator->setActiveByName($name, $this->isActive);
 
         $this->console->info("Plugin [{$name}] created successfully.");
     }
@@ -381,7 +381,7 @@ class ModuleGenerator extends Generator
 
         if (GenerateConfigReader::read('provider')->generate() === true) {
             $this->console->call('plugin:make-provider', [
-                'name' => $this->getName() . 'ServiceProvider',
+                'name' => 'MainServiceProvider',
                 'module' => $this->getName(),
                 '--master' => true,
             ]);
@@ -446,6 +446,7 @@ class ModuleGenerator extends Generator
                 $keys[] = 'PROVIDER_NAMESPACE';
             }
         }
+
         foreach ($keys as $key) {
             if (method_exists($this, $method = 'get' . ucfirst(Str::studly(strtolower($key))) . 'Replacement')) {
                 $replaces[$key] = $this->$method();
@@ -529,7 +530,10 @@ class ModuleGenerator extends Generator
      */
     protected function getModuleNamespaceReplacement()
     {
-        return str_replace('\\', '\\\\', $this->module->config('namespace'));
+        $name = $this->getName();
+        $namespace = ucwords(str_replace('/', ' ', $name));
+        $namespace = str_replace(' ', '\\', $namespace);
+        return str_replace('\\', '\\\\', $namespace);
     }
 
     /**
@@ -554,6 +558,6 @@ class ModuleGenerator extends Generator
 
     protected function getProviderNamespaceReplacement(): string
     {
-        return str_replace('\\', '\\\\', GenerateConfigReader::read('provider')->getNamespace());
+        return 'Providers';
     }
 }

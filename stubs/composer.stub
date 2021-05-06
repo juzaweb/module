@@ -1,16 +1,10 @@
 {
-    "name": "$VENDOR$/$LOWER_NAME$",
+    "name": "$LOWER_NAME$",
     "description": "",
-    "authors": [
-        {
-            "name": "$AUTHOR_NAME$",
-            "email": "$AUTHOR_EMAIL$"
-        }
-    ],
     "extra": {
         "laravel": {
             "providers": [
-                "$MODULE_NAMESPACE$\\$STUDLY_NAME$\\$PROVIDER_NAMESPACE$\\$STUDLY_NAME$ServiceProvider"
+                "$MODULE_NAMESPACE$\\$PROVIDER_NAMESPACE$\\MainServiceProvider"
             ],
             "aliases": {
 
@@ -19,7 +13,7 @@
     },
     "autoload": {
         "psr-4": {
-            "$MODULE_NAMESPACE$\\$STUDLY_NAME$\\": ""
+            "$MODULE_NAMESPACE$\\": "src/"
         }
     }
 }

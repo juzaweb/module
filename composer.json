@@ -7,12 +7,12 @@
         "module for laravel"
     ],
     "license": "MIT",
+    "homepage": "https://github.com/tadcms/tadcms",
     "authors": [
         {
           "name": "The Anh Dang",
           "email": "dangtheanh16@gmail.com",
-          "role": "Developer",
-          "homepage": "https://fb.com/TheAnhDang.1996"
+          "role": "Developer"
         }
     ],
     "require": {

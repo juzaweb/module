@@ -110,7 +110,7 @@ abstract class FileRepository implements RepositoryInterface, Countable
     {
         $paths = $this->paths;
 
-        $paths[] = $this->getPath();
+        $paths[] = $this->getPath() . '/*/*';
 
         if ($this->config('scan.enabled')) {
             $paths = array_merge($paths, $this->config('scan.paths'));

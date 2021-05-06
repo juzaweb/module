@@ -462,7 +462,8 @@ abstract class Plugin
         return $default;
     }
 
-    public function getDisplayName(){
+    public function getDisplayName()
+    {
         return $this->getExtraTadcms('name') ??
             ucwords(str_replace('/', ' ', $this->getName()));
     }

@@ -6,7 +6,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Module Namespace
+    | Plugins Namespace
     |--------------------------------------------------------------------------
     |
     | Default plugin namespace.
@@ -31,7 +31,7 @@ return [
             'routes/web' => 'Routes/web.php',
             'routes/api' => 'Routes/api.php',
             'views/index' => 'Resources/views/index.blade.php',
-            'views/master' => 'Resources/views/layouts/master.blade.php',
+            //'views/master' => 'Resources/views/layouts/master.blade.php',
             //'scaffold/config' => 'Config/config.php',
             'composer' => 'composer.json',
             'assets/js/app' => 'Resources/assets/js/app.js',
@@ -70,7 +70,7 @@ return [
         |
         */
 
-        'modules' => base_path('plugins/*/*'),
+        'modules' => base_path('plugins'),
         /*
         |--------------------------------------------------------------------------
         | Modules assets path
@@ -114,9 +114,9 @@ return [
             'assets' => ['path' => 'resources/assets', 'generate' => true],
             'lang' => ['path' => 'resources/lang', 'generate' => true],
             'views' => ['path' => 'resources/views', 'generate' => true],
-            'test' => ['path' => 'Tests/Unit', 'generate' => true],
-            'test-feature' => ['path' => 'Tests/Feature', 'generate' => true],
-            'repository' => ['path' => 'Repositories', 'generate' => true],
+            'test' => ['path' => 'tests/Unit', 'generate' => true],
+            'test-feature' => ['path' => 'tests/Feature', 'generate' => true],
+            'repository' => ['path' => 'src/Repositories', 'generate' => true],
             'event' => ['path' => 'src/Events', 'generate' => false],
             'listener' => ['path' => 'src/Listeners', 'generate' => false],
             'policies' => ['path' => 'src/Policies', 'generate' => false],
