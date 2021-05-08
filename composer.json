@@ -1,6 +1,5 @@
 {
     "name": "tadcms/module",
-    "version": "1.0.1",
     "description": "Laravel module",
     "keywords": [
         "laravel module",
