@@ -9,7 +9,7 @@
  * Date: 5/1/2021
  * Time: 4:31 PM
  */
-require __DIR__ .'/../../../vendor/autoload.php';
+
 $pluginFolders = __DIR__ . '/../../../plugins';
 $pluginFile = __DIR__ . '/../../../bootstrap/cache/plugins_statuses.php';
 
