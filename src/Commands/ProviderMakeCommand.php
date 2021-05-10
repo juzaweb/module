@@ -37,9 +37,7 @@ class ProviderMakeCommand extends GeneratorCommand
 
     public function getDefaultNamespace() : string
     {
-        $module = $this->laravel['modules'];
-
-        return $module->config('paths.generator.provider.namespace') ?: $module->config('paths.generator.provider.path', 'Providers');
+        return 'Providers';
     }
 
     /**
@@ -72,7 +70,7 @@ class ProviderMakeCommand extends GeneratorCommand
      */
     protected function getTemplateContents()
     {
-        $stub = $this->option('master') ? 'scaffold/provider' : 'provider';
+        $stub = 'provider';
 
         /** @var Plugin $module */
         $module = $this->laravel['modules']->findOrFail($this->getModuleName());

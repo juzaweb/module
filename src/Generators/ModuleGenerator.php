@@ -138,6 +138,13 @@ class ModuleGenerator extends Generator
         return Str::lower($this->name);
     }
 
+    public function getStudlyName()
+    {
+        $name = explode('/', $this->name);
+
+        return Str::studly($name[0]) .'/'. Str::studly($name[1]);
+    }
+
     /**
      * Get the laravel config instance.
      *
@@ -392,7 +399,7 @@ class ModuleGenerator extends Generator
 
         if (GenerateConfigReader::read('controller')->generate() === true) {
             $this->console->call('plugin:make-controller', [
-                'controller' => $this->getName() . 'Controller',
+                'controller' => $this->getStudlyName() . 'Controller',
                 'module' => $this->getName(),
             ]);
         }
