@@ -83,6 +83,7 @@ class ModuleGenerator extends Generator
      * @param Config     $config
      * @param Filesystem $filesystem
      * @param Console    $console
+     * @param ActivatorInterface $activator
      */
     public function __construct(
         $name,
@@ -141,8 +142,8 @@ class ModuleGenerator extends Generator
     public function getStudlyName()
     {
         $name = explode('/', $this->name);
-
-        return Str::studly($name[0]) .'/'. Str::studly($name[1]);
+        $name = $name[1] ?? $name[0];
+        return Str::studly($name);
     }
 
     /**
@@ -380,7 +381,7 @@ class ModuleGenerator extends Generator
     {
         if (GenerateConfigReader::read('seeder')->generate() === true) {
             $this->console->call('plugin:make-seed', [
-                'name' => $this->getName(),
+                'name' => $this->getStudlyName(),
                 'module' => $this->getName(),
                 '--master' => true,
             ]);
